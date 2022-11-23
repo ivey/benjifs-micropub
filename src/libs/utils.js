@@ -46,7 +46,8 @@ const utils = {
 					url.origin == process.env.ME.replace(/\/$/, '') &&
 					url.pathname) {
 				const dir = (process.env.CONTENT_DIR || 'src').replace(/\/$/, '')
-				return `${dir}/${url.pathname.replace(/^\/|\/$/g, '')}.md`
+				const pathname = url.pathname.replace("/micro", '')
+				return `${dir}/${pathname.replace(/^\/|\/$/g, '')}.md`
 			}
 		} catch (err) {
 			console.error(err)

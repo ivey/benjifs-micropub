@@ -73,7 +73,7 @@ const micropubFn = async event => {
 	}
 	if (res && res.filename) {
 		if (action == 'create') {
-			return Response.sendLocation(`${process.env.ME}${res.filename}`)
+			return Response.sendLocation(`${process.env.ME}micro/${res.filename}`)
 		}
 		return Response.send(204)
 	}
