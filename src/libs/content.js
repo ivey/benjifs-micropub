@@ -23,6 +23,7 @@ const content = {
 				output[renameProperties[key] || key] = value
 			}
 		}
+		output["layout"] = "micropost" // so Jekyll will be happy
 		if (clientId) {
 			output['client_id'] = clientId
 		}
